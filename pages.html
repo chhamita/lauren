@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -101,6 +101,8 @@
     <script type="text/javascript" src="js/shared.js"></script>
 
 	<script src="js/bootstrap.min.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/download.js"></script>
 	
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	
@@ -209,12 +211,15 @@
                                 '</div></a>' +
                                 '<div class="businessBody">' +
                                 '<img style="width:100%" src="http://res.cloudinary.com/buddy-industries-cc/image/upload/c_fill,h_900,w_1600/' + data.places[key].image_name +'.jpg" />' +
-                                '<a href="tel:081"><i style="position:absolute; bottom:120px; right:5px" class="fa fa-phone whiteBorderIcon" aria-hidden="true"></i></a>' +
+                                '<a href="tel:081"><i style="position:absolute; bottom:186px; right:5px" class="fa fa-phone whiteBorderIcon" aria-hidden="true"></i></a>' +
                                 '<a target="_blank" href="https://maps.google.com/?saddr=Current+Location&daddr=' + data.places[key].latitude + ',' + data.places[key].longitude +'">' +
-                                '<i style="position:absolute; bottom:63px; right:5px" class="fa fa-map-marker whiteBorderIcon" aria-hidden="true"></i>' +
+                                '<i style="position:absolute; bottom:123px; right:5px" class="fa fa-map-marker whiteBorderIcon" aria-hidden="true"></i>' +
                                 '</a>' +
                                 '<a href="start-new-chat.html">' +
-                                '<i style="position:absolute; bottom:5px; right:5px" class="fa fa-commenting-o whiteBorderIcon" aria-hidden="true"></i>' +
+                                '<i style="position:absolute; bottom:63px; right:5px" class="fa fa-commenting-o whiteBorderIcon" aria-hidden="true"></i>' +
+                                '</a>' +
+                                '<a href="#" onclick="downloadpageoffline(' +data.places[key].id+ ')">' +
+                                '<i style="position:absolute; bottom:5px; right:5px" class="fa fa-download whiteBorderIcon" aria-hidden="true"></i>' +
                                 '</a>' +
                                 '</div>' +
                                 '</div>';
